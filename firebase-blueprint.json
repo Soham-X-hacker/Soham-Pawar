@@ -1,0 +1,80 @@
+{
+  "entities": {
+    "User": {
+      "collection": "users",
+      "fields": {
+        "id": { "type": "string", "required": true },
+        "email": { "type": "string", "required": true },
+        "fullName": { "type": "string", "required": true },
+        "role": { "type": "string", "required": true },
+        "phone": { "type": "string", "required": false },
+        "createdAt": { "type": "timestamp", "required": true }
+      }
+    },
+    "Vehicle": {
+      "collection": "vehicles",
+      "fields": {
+        "id": { "type": "string", "required": true },
+        "vehicleNumber": { "type": "string", "required": true },
+        "vehicleType": { "type": "string", "required": true },
+        "operatorId": { "type": "string", "required": true },
+        "driverName": { "type": "string", "required": true },
+        "driverPhone": { "type": "string", "required": true },
+        "capacity": { "type": "number", "required": true },
+        "busCode": { "type": "string", "required": true },
+        "status": { "type": "string", "required": true },
+        "schoolDestination": { "type": "string", "required": true }
+      }
+    },
+    "Student": {
+      "collection": "students",
+      "fields": {
+        "id": { "type": "string", "required": true },
+        "fullName": { "type": "string", "required": true },
+        "parentId": { "type": "string", "required": true },
+        "vehicleId": { "type": "string", "required": true },
+        "routeId": { "type": "string", "required": true },
+        "pickupStop": { "type": "string", "required": true },
+        "dropOffStop": { "type": "string", "required": true },
+        "pickupStatus": { "type": "string", "required": true }
+      }
+    },
+    "ConnectionRequest": {
+      "collection": "connection_requests",
+      "fields": {
+        "id": { "type": "string", "required": true },
+        "busCode": { "type": "string", "required": true },
+        "parentId": { "type": "string", "required": true },
+        "parentName": { "type": "string", "required": true },
+        "studentName": { "type": "string", "required": true },
+        "vehicleId": { "type": "string", "required": true },
+        "status": { "type": "string", "required": true },
+        "requestedAt": { "type": "number", "required": true }
+      }
+    },
+    "Trip": {
+      "collection": "trips",
+      "fields": {
+        "id": { "type": "string", "required": true },
+        "vehicleId": { "type": "string", "required": true },
+        "routeId": { "type": "string", "required": true },
+        "driverId": { "type": "string", "required": true },
+        "status": { "type": "string", "required": true },
+        "startTime": { "type": "number", "required": true }
+      }
+    },
+    "SafetyAlert": {
+      "collection": "safety_alerts",
+      "fields": {
+        "id": { "type": "string", "required": true },
+        "reporterId": { "type": "string", "required": true },
+        "vehicleId": { "type": "string", "required": true },
+        "severity": { "type": "string", "required": true },
+        "category": { "type": "string", "required": true },
+        "description": { "type": "string", "required": true },
+        "status": { "type": "string", "required": true },
+        "timestamp": { "type": "number", "required": true }
+      }
+    }
+  }
+}
